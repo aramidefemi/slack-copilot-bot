@@ -4,5 +4,6 @@ export interface IResponse extends Document {
   userId: String;
   user: Object;
   data: any;
-  responses: any;
+  questionOne: any;
+  questionTwo: any;
 }

@@ -6,8 +6,8 @@ import ResponseService from '../service/response.service';
 
 class ResponseController {
   public fetchResponses = async (req: Request, res: Response) => {
-     const data = ResponseService.fetch();
-    return ResponseHandler.SuccessResponse(res, HttpStatus.OK, { data });
+     const data = await ResponseService.fetch();
+    return ResponseHandler.SuccessResponse(res, HttpStatus.OK, data );
   };
   public static saveResponses = async (action: any, result: any) => {
     const user = await ResponseService.find({

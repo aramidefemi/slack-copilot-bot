@@ -14,7 +14,6 @@ export const WELCOME_MESSAGE = {
             text: {
               type: 'plain_text',
               text: 'Doing Well',
-              emoji: true,
             },
             value: 'Doing Well',
           },
@@ -22,7 +21,6 @@ export const WELCOME_MESSAGE = {
             text: {
               type: 'plain_text',
               text: 'Neutral',
-              emoji: true,
             },
             value: 'Neutral',
           },
@@ -30,7 +28,6 @@ export const WELCOME_MESSAGE = {
             text: {
               type: 'plain_text',
               text: 'Feeling Lucky',
-              emoji: true,
             },
             value: 'Feeling Lucky',
           },

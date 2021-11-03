@@ -17,19 +17,21 @@ class MessageController {
       if (typeof body === 'undefined') {
         const action = JSON.parse(req.body.payload);
         body = action.actions[0].action_id;
-        const answer = action.actions[0].selected_option.value
+        let answer;
 
         switch (body) {
           case 'mood-select': 
+            answer = action?.actions[0]?.selected_option?.value;
             await ResponseController.saveResponses(action, {
-              questionTwo: answer,
+              questionOne: answer,
             });
             await Http.sendReply(action.response_url, HOBBIES_MESSAGE);
             break;
           case 'hoobies-select': 
+            answer = action?.actions[0]?.selected_options;
              await ResponseController.saveResponses(
                action,
-               { questionOne: answer }, 
+               { questionTwo: answer }, 
              );
             break;
           case 'hoobies-submit':

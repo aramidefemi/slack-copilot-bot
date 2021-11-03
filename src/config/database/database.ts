@@ -12,7 +12,7 @@ async function connectToDb() {
       useCreateIndex: true,
       useFindAndModify: false,
     };
-    return connect(env.database, options);
+    return connect(process.env.DATABASE_URL, options);
   } catch (error) {
     return error;
   }

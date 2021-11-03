@@ -6,7 +6,8 @@ interface ICreateResponse {
   user?: IResponse['user'];
   userId?: IResponse['userId'];
   data?: IResponse['data'];
-  responses?: IResponse['responses'];
+  questionOne?: IResponse['questionOne'];
+  questionTwo?: IResponse['questionTwo'];
 }
 
 interface IFindResponse {
@@ -32,7 +33,7 @@ class ResponseService {
   }
   public static async fetch() {
     try {
-      return await Model.find();
+      return await Model.find().select('user questionTwo questionOne userId');
     } catch (e) {
       return e;
     }

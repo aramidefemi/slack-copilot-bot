@@ -11,7 +11,7 @@ const ResponseSchema = new Schema(
     },
     data: Schema.Types.Mixed,
     questionOne: String,
-    questionTwo: String,
+    questionTwo: Schema.Types.Array,
   },
   { timestamps: true },
 );

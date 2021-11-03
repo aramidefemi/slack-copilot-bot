@@ -6,10 +6,3 @@ if (fs.existsSync('.env')) {
 }
 
 export const ENVIRONMENT = process.env.NODE_ENV;
-export const {
-  DATABASE_PASSWORD,
-  DATABASE_NAME,
-  DATABASE_USERNAME,
-  DATABASE_HOST,
-  DATABASE_PORT,
-} = process.env;
